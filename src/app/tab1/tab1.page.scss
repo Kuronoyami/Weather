@@ -1,0 +1,42 @@
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#container {
+  text-align: center;
+}
+
+h1 {
+  color: #5457ff;
+}
+
+span {
+  color: #ff1bd5;
+}
+
+h3 {
+  color: #fff;
+}
+
+.ion-60p {
+  font-size: 60px;
+}
+
+.ion-30p {
+  font-size: 24px;
+  font-weight: 400;
+  color: #5457ff;
+}
+
+ion-badge {
+  font-size: 34px;
+  background: linear-gradient(45deg, #5457ff 0%, #ff1bd5 100%);
+  color: white;
+  padding: 10px;
+  border-radius: 20rem;
+  font-weight: 400;
+} /*# sourceMappingURL=tab1.page.css.map */

@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title color="warning">Weather Forecast Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container" class="centered">
+    <ion-card>
+      <div class="ion-card-content ion-padding">
+        <div class="ion-justify-content-center">
+          <h1 class="ion-60p">{{weather.temp}} °C</h1>
+
+          <img src="http://openweathermap.org/img/wn/{{weather.icon}}@2x.png" />
+          <h1 class="ion-30p">
+            {{weather.main}} <small>({{weather.desc}})</small><br />
+            <div class="d-flow">
+              <ion-icon color="warning" name="calendar-outline"></ion-icon>
+              <p>{{weather.date | date:'dd MMM yyyy - HH:mm'}}</p>
+            </div>
+          </h1>
+
+          <ion-button (click)="save()">Add Favorite</ion-button>
+        </div>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>

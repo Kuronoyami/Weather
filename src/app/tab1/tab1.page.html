@@ -1,17 +1,34 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-title color="warning"> Weather Now </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content
+  [fullscreen]="true"
+  class="ion-text-center"
+  class="ion-padding-top"
+>
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Now</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <div id="container" class="ion-padding-top">
+    <h1 class="ion-60p">{{temp | number: '1.0-0'}} <span> °C</span></h1>
+    <div *ngIf="weathers.weather">
+      <img
+        src="http://openweathermap.org/img/wn/{{weathers.weather[0].icon}}@2x.png"
+        height="300px"
+      />
+      <br />
+      <ion-badge class="ion-margin-top"> {{city}} </ion-badge>
+      <br />
+      <h3 class="ion-30p" color="warning">
+        {{weathers.weather[0].main}}
+        (<small>{{weathers.weather[0].description}}</small>)
+      </h3>
+    </div>
+  </div>
 </ion-content>
